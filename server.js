@@ -15,11 +15,43 @@ function createTemplate(data){
     
     var date=data.date;
     var content=data.content;
-    var htmlTemplate='hey there im making a web app';
-    '${content}';
-    'this is the content';
-    "${date}";
-    'and this is date'
+    var htmlTemplate=`<html>
+    <head>
+        <title>
+            Article One | Ashish Duklan
+        </title>
+    </head>
+    <link href="/ui/style.css" rel="stylesheet" />
+  
+    <body>
+        <div>
+            <a href="/">
+                this is date ${date}
+            </a>
+            <a href='/ui/madi.png'>
+                link to image
+            </a>
+                
+        </div>
+        <hr/>
+        
+        <div class='cont'>
+            <h3>
+                Article One
+            </h3>
+            <div>
+                Aug 18,2017
+                </div>
+                <div>
+                    <p>
+                      ${content}  
+                    </p>
+                </div>
+        </div>
+    </body>
+    
+    
+</html>`
     ;
     
     return htmlTemplate;
