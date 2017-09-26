@@ -5,6 +5,27 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var art_1_obj={
+    title:'art-one',
+    heading:'ART-ONE',
+    date:'sept-26',
+    content:'  This is the content for my first article'
+};
+function createTemplate(data){
+    
+    var date=data.date;
+    var content=data.content;
+    var htmlTemplate='hey there im making a web app';
+    '${content}';
+    'this is the content';
+    "${date}";
+    'and this is date'
+    ;
+    
+    return htmlTemplate;
+}
+    
+    
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -19,8 +40,9 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
+     res.send(createTemplate(art_1_obj))
      
-     res.sendFile(path.join(__dirname,'ui','article-one.html'));
+    // res.sendFile(path.join(__dirname,'ui','article-one.html'));
      
 });
 // Do not change port, otherwise your app won't run on IMAD servers
