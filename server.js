@@ -18,6 +18,10 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+app.get('/:pathVar',function(req,res){
+    var locVar=req.param.pathVar;
+    res.sendFile(path.join(_dirname,'ui',locVar));
+})
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
 
