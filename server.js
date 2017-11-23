@@ -1,5 +1,5 @@
-var express = require('express');
-var morgan = require('morgan');
+var express = require('express'); //libraries-jcreating web server
+var morgan = require('morgan');//output log ..what requests are coming to the server
 var path = require('path');
 
 var app = express();
