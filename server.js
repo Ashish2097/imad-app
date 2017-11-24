@@ -22,9 +22,10 @@ var cool={
     
 };
 function call(arg){
+    var text=arg.text;
     var newText=`
     <h2>
-        ${arg.text}
+        ${text}
     </h2>
     `;
     return newText;
