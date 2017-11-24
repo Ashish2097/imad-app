@@ -18,7 +18,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var cool={
-    text="hey! there";
+    text:"hey! there"
     
 }
 function call(arg){
