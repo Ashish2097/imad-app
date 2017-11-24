@@ -22,7 +22,11 @@ var cool={
     
 };
 function call(arg){
-    var newText='<h2>${arg.text}</h2>';
+    var newText=`
+    <h2>
+        ${arg.text}
+    </h2>
+    `;
     return newText;
 }
 app.get('/article-one',function(req,res){
